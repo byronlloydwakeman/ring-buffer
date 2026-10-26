@@ -7,6 +7,7 @@
     <groupId>org.finance</groupId>
     <artifactId>ring-buffer</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <description>A fixed-capacity FIFO ring buffer for long values, implemented in Java.</description>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
