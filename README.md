@@ -39,22 +39,6 @@ Following the slot arrows from the head gives the FIFO order (`6`, `7`, `8`, `9`
 
 Add the source to your project or build this repository with Maven. The class is in the `org.finance` package:
 
-```java
-import org.finance.RingBuffer;
-
-public class Example {
-    public static void main(String[] args) {
-        RingBuffer buffer = new RingBuffer();
-
-        if (!buffer.offer(42L)) {
-            throw new IllegalStateException("Buffer is full");
-        }
-
-        long value = buffer.poll(); // 42
-    }
-}
-```
-
 `offer(long)` returns `false` when all eight slots are occupied. Check `size()` before calling `poll()` if the buffer may be empty; `poll()` throws `IllegalStateException` in that case.
 
 This implementation is not thread-safe.
